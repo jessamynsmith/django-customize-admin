@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.urls import reverse
 from django.utils.html import format_html
 
 from pets import models
@@ -12,8 +13,13 @@ class PetAdmin(admin.ModelAdmin):
             registration_date = obj.get_registrations()[0].created_at
             display_text = 'Pet registered on {}'.format(registration_date)
         else:
-            display_text = format_html('<button class="register" data-pet_id="{}">Register</button>'.format(obj.pk))
+            display_text = format_html('<a href="#" class="register" data-pet_id="{}"'
+                                       'data-register_url="{}">Register</a>'.format(
+                                        obj.pk, reverse('register_pet')))
         return display_text
+
+    class Media:
+        js = ("pets/register_pet.js",)
 
 
 class PetRegistrationAdmin(admin.ModelAdmin):

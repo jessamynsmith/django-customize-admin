@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from pets import views as pet_views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/pet/register/', pet_views.register_pet, name='register_pet'),
 ]

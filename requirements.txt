@@ -91,7 +91,7 @@ python-mimeparse==0.1.4
 python-openid==2.2.5
 python3-openid==3.0.10
 pytz==2016.10
-PyYAML==3.12
+PyYAML==5.4
 readme-renderer==24.0
 requests==2.20.1
 requests-oauthlib==0.6.2

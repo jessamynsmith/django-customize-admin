@@ -75,7 +75,7 @@ pluggy==0.4.0
 prettytable==0.7.2
 protobuf==3.7.1
 psycopg2==2.7.4
-py==1.4.34
+py==1.10.0
 pyasn1==0.3.7
 pycairo==1.17.1
 pycodestyle==2.3.1
